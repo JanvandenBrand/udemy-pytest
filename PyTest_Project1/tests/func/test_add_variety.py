@@ -87,4 +87,12 @@ def test_add_6(task):
 class TestAdd():
 
     def test_equivalent(self, task):
+        task_id = tasks.add(task)
+        t_from_db = tasks.get(task_id)
+        assert equivalent(t_from_db, task)
+
+    def test_valid_id(self, task):
+        task_id = tasks.add(task)
+        t_from_db = tasks.get(task_id)
+        assert t_from_db.id == task_id
         

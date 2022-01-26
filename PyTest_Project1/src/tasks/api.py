@@ -66,7 +66,7 @@ def count():
     return _tasksdb.count()
 
 
-def update(task_id, task):  # type: (int, Task) -> None
+def update(task_id, task):  # type: (int, Task)
     """Modify task in db with given task_id."""
     if not isinstance(task_id, int):
         raise TypeError('task_id must be an int')
@@ -82,7 +82,7 @@ def update(task_id, task):  # type: (int, Task) -> None
     _tasksdb.update(task_id, current_task)
 
 
-def delete(task_id):  # type: (int) -> None
+def delete(task_id):  # type: (int) 
     """Remove a task from db with given task_id."""
     if not isinstance(task_id, int):
         raise TypeError('task_id must be an int')
@@ -91,7 +91,7 @@ def delete(task_id):  # type: (int) -> None
     _tasksdb.delete(task_id)
 
 
-def delete_all():  # type: () -> None
+def delete_all():  # type: () 
     """Remove all tasks from db."""
     if _tasksdb is None:
         raise UninitializedDatabase()
@@ -108,7 +108,7 @@ def unique_id():  # type: () -> int
 _tasksdb = None
 
 
-def start_tasks_db(db_path, db_type):  # type: (str, str) -> None
+def start_tasks_db(db_path, db_type):  # type: (str, str) 
     """Connect API functions to a db."""
     if not isinstance(db_path, string_types):
         raise TypeError('db_path must be a string')
@@ -123,7 +123,7 @@ def start_tasks_db(db_path, db_type):  # type: (str, str) -> None
         raise ValueError("db_type must be a 'tiny' or 'mongo'")
 
 
-def stop_tasks_db():  # type: () -> None
+def stop_tasks_db():  # type: ()
     """Disconnect API functions from db."""
     global _tasksdb
     _tasksdb.stop_tasks_db()
