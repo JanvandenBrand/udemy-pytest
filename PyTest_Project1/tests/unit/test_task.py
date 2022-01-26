@@ -1,5 +1,3 @@
-"""Test file identity."""
-
 from tasks import Task
 
 def test_asdict():
