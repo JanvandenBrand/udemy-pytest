@@ -37,5 +37,26 @@ Somewhat more complext tests can be be found in `tests/unit/test_task.py`.
 
 The use of fixtures and parameters is shown in `tests/unit/test_add_variety.py`. This includes support function for the test suite (*i.e.* equivalent), single parameters, and the set up of multiple parameters. 
 
+## Installing the packages
+Make sure pytest nor the project are installed globally. In the global env run:
 
+> pytest --version
+> tasks --version
 
+If either shows up run:
+
+> pip uninstall pytest
+> pip uninstall tasks
+
+Create a virtual environment:
+
+> venv -m venv ~/.udemy-pytest 
+
+Activate the virtual environment:
+
+> source ~/.udemy-pytest/bin/activate
+
+Install the project and pytest package in the virtual environment:
+
+pip install pytest
+pip install ./PyTest_Project1

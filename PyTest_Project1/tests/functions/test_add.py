@@ -4,6 +4,9 @@ Created on May 17, 2021
 @author: martinyanev
 '''
 import pytest
+import sys
+import os
+sys.path.append(os.path.abspath("./src/tasks/"))
 import tasks
 from tasks import Task
 
