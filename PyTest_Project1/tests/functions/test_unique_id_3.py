@@ -12,14 +12,11 @@ def test_unique_id_1():
     assert id_1 != id_2
 
 
+list_ids = ['one', 'two', 'three']
 def test_unique_id_2():
-    ids = []
-    ids.append(tasks.add(Task('first')))
-    ids.append(tasks.add(Task('second')))
-    ids.append(tasks.add(Task('third')))
-
-    uid = tasks.unique_id()
+    ids = [tasks.add(Task(id)) for id in list_ids]
     
+    uid = tasks.unique_id()
     assert uid not in ids
 
 

@@ -6,7 +6,7 @@ Created on May 17, 2021
 
 from tasks import Task
 
-def test_task_equility():
+def test_task_equality():
     t1 = Task('sit there', 'james')
     t2 = Task('do something', 'smith')
     assert t1 == t2

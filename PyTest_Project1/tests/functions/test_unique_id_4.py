@@ -23,12 +23,9 @@ def test_unique_id_not_a_duck():
     uid = tasks.unique_id()
     assert uid != 'fish'
 
-
+list_ids = ['first', 'second', 'third']
 def test_unique_id_2():
-    ids = []
-    ids.append(tasks.add(Task('first')))
-    ids.append(tasks.add(Task('second')))
-    ids.append(tasks.add(Task('third')))
+    ids = [tasks.add(Task(id)) for id in list_ids]    
     uid = tasks.unique_id()
     assert uid not in ids
 
