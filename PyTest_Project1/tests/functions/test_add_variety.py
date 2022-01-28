@@ -64,6 +64,7 @@ def test_add_4(task):
     t_from_db = tasks.get(task_id)
     assert equivalent(t_from_db, task)
 
+# parametrized test with reporting of parameter values
 task_ids = ['Task({},{},{})'.format(t.summary, t.owner, t.done)
             for t in tasks_to_try]
 
@@ -73,6 +74,7 @@ def test_add_5(task):
     t_from_db = tasks.get(task_id)
     assert equivalent(t_from_db, task)
 
+#  parametrized test with reporting of the id of the parameter set
 @pytest.mark.parametrize('task', [
     pytest.param(Task('set'), id='just summary'),
     pytest.param(Task('start', 'Pamela'), id='summary/owner'),
@@ -82,6 +84,7 @@ def test_add_6(task):
     t_from_db = tasks.get(task_id)
     assert equivalent(t_from_db, task)
 
+# Parametrized testing using OOP, rrturns the tests with human readable ids.
 @pytest.mark.parametrize('task', tasks_to_try, ids=task_ids)
 class TestAdd():
 
