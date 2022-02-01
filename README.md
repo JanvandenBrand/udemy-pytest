@@ -27,17 +27,9 @@ Learning unit tests for Python with pytest
 | --durations=<n> | Show top n test durations. Useful for large test suites / execution times |
 |--version | Check pytest version |
 
-## Section4 
-Basic set-up to call pytest from a test_foo.py file.
-
-## PyTest_Project1
-Basic pytest syntax can be found in `tests/unit/test_task_fail.py`. This script shows (obviously) failing tests. 
-
-Somewhat more complext tests can be be found in `tests/unit/test_task.py`.
-
-The use of fixtures and parameters is shown in `tests/unit/test_add_variety.py`. This includes support function for the test suite (*i.e.* equivalent), single parameters, and the set up of multiple parameters. 
-
 ## Installing the packages
+* To do: install from github (clone)
+
 Make sure pytest nor the project are installed globally. In the global env run:
 
 > pytest --version
@@ -60,3 +52,18 @@ Install the project and pytest package in the virtual environment:
 
 pip install pytest
 pip install ./PyTest_Project1
+
+## Section4 
+Basic set-up to call pytest from a `test_foo.py` file.
+
+## PyTest_Project1
+Basic pytest syntax can be found in `tests/unit/test_task_fail.py`. This script shows failing tests. 
+
+Somewhat more complex tests can be be found in `tests/unit/test_task.py`.
+
+The use of fixtures and parameters is shown in `tests/unit/test_add_variety.py`. This includes support function for the test suite (*i.e.* equivalent), single parameters, and the set up of multiple parameters. 
+
+## Pytest_Project4
+A more detailed explanation of *markers* and *fixtures* to enable respectively selective testing and testing with multiple parameters at the same time.
+
+

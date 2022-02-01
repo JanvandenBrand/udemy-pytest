@@ -20,5 +20,6 @@ def test_added_task_has_id_set(tasks_db):
 
 def test_add_increases_count(db_with_3_tasks):
     tasks.add(Task('Throw a party'))
-    # count the number of tasks in db_with_3_tasks
+    # count the number of tasks in db_with_3_tasks + the 'Throw a party' task
     assert tasks.count() == 4
+ 
