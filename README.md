@@ -22,10 +22,10 @@ Learning unit tests for Python with pytest
 | --maxfail=<n> | Exit on <n-th> error. SImilar to -x flag. |
 | --lf, --last-failed | Rerun only the tests that failed at the last run (or all if none failed). Useful when you have very large test suites. |
 | --ff, --failed-first | Run all tests, but run the last failures first. |
-|-l, --show-locals | Show local variables in traceback output. |
+| -l, --show-locals | Show local variables in traceback output. |
 | --tb=no | Do not show traceback output. |
 | --durations=<n> | Show top n test durations. Useful for large test suites / execution times |
-|--version | Check pytest version |
+| --version | Check pytest version |
 
 ## Installing the packages
 * To do: install from github (clone)
