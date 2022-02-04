@@ -16,16 +16,37 @@ Learning unit tests for Python with pytest
 | --help | Help documentation |
 | -v, --verbose | Verbose traceback output |
 | -collect-only | Only collect the tests, do not run them. Useful to: 1) check if your tests are recognized by pytest. 2) Identify single tests for isolated execution. |
-| -k <expression> | Only run tests which match the given substring expression. |
-| -m <expression> | Only run tests matching the given mark expression. Uses decorator style markings: @pytest.mark.<tag> Usefull when you have very large test suites. Allows execution to stagger from quick and small to large and slow. |
+| -k *expression* | Only run tests which match the given substring expression. |
+| -m *expression* | Only run tests matching the given mark expression. Uses decorator style markings: @pytest.mark.<tag> Usefull when you have very large test suites. Allows execution to stagger from quick and small to large and slow. |
 | -x | Exit on first failed test. Useful when you have very large test suites / execution times. Works well in conjuction with the -m flag. |
-| --maxfail=<n> | Exit on <n-th> error. SImilar to -x flag. |
+| --maxfail=*n* | Exit on *n^th* error. SImilar to -x flag. |
 | --lf, --last-failed | Rerun only the tests that failed at the last run (or all if none failed). Useful when you have very large test suites. |
 | --ff, --failed-first | Run all tests, but run the last failures first. |
 | -l, --show-locals | Show local variables in traceback output. |
 | --tb=no | Do not show traceback output. |
-| --durations=<n> | Show top n test durations. Useful for large test suites / execution times |
+| --durations=*n* | Show top *n* test durations. Useful for large test suites / execution times |
 | --version | Check pytest version |
+
+## Finding pytest plugins
+The pytest documentation: https://docs.pytest.org/en/latest/plugins.html 
+Python home: https://pypi.python.org
+GitHub: https://github.com/pytest-dev
+
+### installing plugins
+For example the code coverage plugin. From the terminal:
+
+> pip install pytest-cov
+
+## pytest configuration
+| File | Description |
+| ---- | ----------- |
+| pytest.ini* | Initialization of pytest run. The primary configuration file to set default behavior |
+| tox.ini* | Alternative to pytest.ini |
+| setup.cfg* | Run the python setup.py test and have it run all tests. Alternative to pytest.ini |
+| conftest.py | Hooks for functions and fixtures in the directory where conftest.py is located |
+| \__init__.py | Allows for identical test filenames across directories |
+
+*pytest looks for pytest.ini, tox.ini and setup.cfg and uses the first it finds.
 
 ## Installing the packages
 * To do: install from github (clone)
@@ -53,6 +74,7 @@ Install the project and pytest package in the virtual environment:
 pip install pytest
 pip install ./PyTest_Project1
 
+
 ## Section4 
 Basic set-up to call pytest from a `test_foo.py` file.
 
@@ -66,4 +88,11 @@ The use of fixtures and parameters is shown in `tests/unit/test_add_variety.py`.
 ## Pytest_Project4
 A more detailed explanation of *markers* and *fixtures* to enable respectively selective testing and testing with multiple parameters at the same time.
 
+## Pytest_Project5
+The use of built-in fixtures, such as caching, tmpdir, and standard errors.
+
+## Pytest_Project6
+Creating plugins of your own.
+
+## Pytest_Project7 - Configure tests
 
