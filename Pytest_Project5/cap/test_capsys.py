@@ -38,7 +38,7 @@ def test_capsys_disabled(capsys):
 
 
 @pytest.mark.parametrize('i', range(40))
-def test_for_fun(i, capsys):
+def test_for_fun(i, capsys): # i is not referenced?
     if random.randint(1, 10) == 2:
         with capsys.disabled():
             sys.stdout.write('F')

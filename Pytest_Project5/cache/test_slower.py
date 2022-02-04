@@ -11,6 +11,7 @@ def check_duration(request, cache):
     # keys become filenames within .cache
     # replace colons with something filename safe
     start_time = datetime.datetime.now()
+    # yield to call the iterable
     yield
     stop_time = datetime.datetime.now()
     this_duration = (stop_time - start_time).total_seconds()

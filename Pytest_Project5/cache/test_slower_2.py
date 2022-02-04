@@ -6,7 +6,7 @@ from collections import namedtuple
 
 Duration = namedtuple('Duration', ['current', 'last'])
 
-
+# use the Duration named for the entire test session.
 @pytest.fixture(scope='session')
 def duration_cache(request):
     key = 'duration/testdurations'

@@ -13,7 +13,7 @@ testdata = [
 ]
 
 
-@pytest.mark.parametrize("test matrix", testdata)
+@pytest.mark.parametrize("x, y, expected", testdata)
 def test_a(x, y, expected):
     sum_ = x + y
     assert sum_ == approx(expected)
